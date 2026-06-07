@@ -11,6 +11,7 @@ struct KDIMAGE
     int nalpha,nbeta;
     double alphamin,alphamax,betamin,betamax;
     double *fluxtab;
+    double *gtab;
     double *alphatab;
     double *betatab;
     

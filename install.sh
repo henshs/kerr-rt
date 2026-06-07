@@ -113,8 +113,8 @@ GNUPLOT_EOF
 
 gnuplot "$plot"
 rm "$plot"
-EOF
 echo "Disk Image generated"
+EOF
 
 chmod +x "$sample_run"
 

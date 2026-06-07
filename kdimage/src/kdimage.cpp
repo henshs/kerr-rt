@@ -16,9 +16,11 @@ void kdimage_init(FILE *f, KDIMAGE *kd)
     kd->nbeta=nbeta;
 
     kd->fluxtab = new double[nalpha*nbeta];
+    kd->gtab = new double[nalpha*nbeta];
 
    
     for(int i=0;i<nalpha*nbeta;i++) kd->fluxtab[i]=0;
+    for(int i=0;i<nalpha*nbeta;i++) kd->gtab[i]=0;
 
     while(1)
     {
@@ -28,8 +30,8 @@ void kdimage_init(FILE *f, KDIMAGE *kd)
         int indx = ibeta*kd->nalpha+ialpha;
 	
         kd->fluxtab[indx] = flux;
+        kd->gtab[indx] = g;
        
-    
     }
 }
 
@@ -47,7 +49,7 @@ void kdimage_print(KDIMAGE *kd)
         {
             beta=kd->betamin+ibeta*dbeta;
             int indx=ibeta*kd->nalpha+ialpha;
-            printf("%lf %lf %lf\n",alpha,beta,kd->fluxtab[indx]);
+            printf("%lf %lf %lf %lf\n",alpha,beta,kd->fluxtab[indx], kd->gtab[indx]);
         }
     }
 }
