@@ -49,10 +49,10 @@ sample_run="simulations/run.sh"
 cat << 'EOF' > "$sample_run"
 #!/bin/bash
 a=0.1
-tho=30.0
+tho=85.0
 
 uo=1e-3
-rmax=10
+rmax=20
 alphamin=-25.0
 alphamax=25.0
 betamin=-25.0
