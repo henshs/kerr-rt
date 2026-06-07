@@ -37,6 +37,7 @@ The main simulation parameters can be modified directly in `run.sh` according to
 |------------|------------|
 | `a` | Black-hole spin parameter |
 | `tho` | Observer inclination angle in degrees (`0°` = face-on, `90°` = edge-on) |
+| `rmin` | Inner radius of the emitting disk, default it is ISCO radius |
 | `rmax` | Outer radius of the emitting disk |
 | `alphamin`, `alphamax` | Horizontal field of view on the observer sky |
 | `betamin`, `betamax` | Vertical field of view on the observer sky |
